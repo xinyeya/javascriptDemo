@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    body {
+      background: #fff;
+    }
+  </style>
+</head>
+
+<body>
+  <button>关灯</button>
+  <script>
+    // 1. 获取按钮元素
+    var button = document.querySelector('button');
+    // 2. 获取body元素
+    var body = document.body;
+    // 3. 给按钮注册onclick事件
+    button.onclick = function () {
+      // 3.1 判断按钮的内容是否是关灯，若是关灯，则把内容改为开灯
+      if (this.innerText == '关灯') {
+        this.innerText = '开灯';  //便于下一次开灯
+        // 更改body的背景
+        body.style.backgroundColor = '#000';
+
+      } else { // 3.2 否则，改为关灯
+        this.innerText = '关灯';   // 便于下一次关灯
+        // 更改body的背景
+        body.style.backgroundColor = '#fff';
+      }
+
+    };
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    div {
+      width: 500px;
+      background: green;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h2>标题</h2>
+    <ul>
+      <li>列表</li>
+      <li>列表</li>
+      <li>列表</li>
+    </ul>
+    <p>段落</p>
+
+  </div>
+
+  <script>
+    // 获取元素
+    var box = document.querySelector('.box');
+    // 克隆
+    // var newBox = box.cloneNode();  //默认是false，表示仅仅克隆元素的外层标签，内部具体内容不会被克隆
+    // var newBox = box.cloneNode(false);
+    var newBox = box.cloneNode(true);  // 克隆元素的所有的内容
+    newBox.style.background = 'gold';
+    // 追加到body
+    document.body.appendChild(newBox);
+  </script>
+
+</body>
+</html>

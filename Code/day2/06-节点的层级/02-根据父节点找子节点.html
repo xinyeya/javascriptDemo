@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <ul>
+    <!-- 注释 -->
+    <li>我是列表项1</li>
+    <li>我是列表项2</li>
+    <li>我是列表项3</li>
+  </ul>
+  <script>
+    // 获取ul
+    var ul = document.querySelector('ul');
+    // 父节点.childNodes
+    // 注意：获取的节点包含了所有节点（注释、文本、标签....）
+    // 类型：NodeList
+    console.log(ul.childNodes);
+
+    // 父节点.children 【重点】
+    // 注意：获取的仅仅是元素（标签转换后阶段）
+    // 类型：HTMLCollection
+    console.log(ul.children);
+    // 获取第一个元素类型孩子
+    var first = ul.firstElementChild;
+    console.log(first);
+    // 获取第一个元素类型孩子
+    var last = ul.lastElementChild;
+    console.log(last);
+
+    console.log(ul.children[0]);
+    console.log(ul.children[2]);
+
+
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <ul>
+    <li>我是列表项1</li>
+    <li>我是列表项2</li>
+    <li>我是列表项3</li>
+  </ul>
+  <script>
+    // 获取ul
+    var ul = document.querySelector('ul');
+    // 【节点.nodeType】 返回节点的类型
+    // 文档节点→ document.nodeType → 9
+    console.log(document.nodeType);
+    // 元素节点→ 如ul.nodeType → 1
+    console.log(ul.nodeType);  // 1;
+    console.log(ul.firstElementChild.nodeType);  // 1;
+    // 文本节点→ 文本节点.nodeType → 3
+    console.log(ul.childNodes[0].nodeType);  // 3
+
+
+    // 可以通过nodeType筛选想要的节点
+    // var nodes = ul.childNodes;
+    // for(var i = 0; i <nodes.length; i++) {
+    //   if(nodes[i].nodeType==1) {
+    //     console.log(nodes[i]);
+    //   }
+    // }
+
+    // 【nodeName】→ 检测标签的名字
+    console.log(ul.nodeName);  // UL
+    console.log(ul.firstElementChild.nodeName); // LI
+
+    // 【nodeValue】→ 检测文本节点内容
+    console.log(ul.childNodes[0].nodeValue);
+ 
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    #btn {
+      color: red;
+    }
+  
+  </style>
+</head>
+<body>
+  <button id="btn">按钮1</button>
+  <button>按钮2</button>
+  <script>
+    // 语法：document.querySelector('选择器');
+    // var btn = document.querySelector('#btn');
+    var btn = document.querySelector('button');
+    console.log(btn);
+    // 注意：不要少了选择器的规则 比如加#  加.等
+    // 注意：有兼容问题，在IE8以下不支持
+  </script>
+</body>
+</html>

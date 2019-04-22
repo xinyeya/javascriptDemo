@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+  <head lang="en">
+    <meta charset="UTF-8" />
+    <title></title>
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+
+  <body>
+    <h2>
+      美女画廊
+    </h2>
+    <div id="image">
+      <a href="images/1.jpg" title="美女A">
+        <img src="images/1-small.jpg" width="100px" alt="美女1" />
+      </a>
+      <a href="images/2.jpg" title="美女B">
+        <img src="images/2-small.jpg" width="100px" alt="美女2" />
+      </a>
+      <a href="images/3.jpg" title="美女C">
+        <img src="images/3-small.jpg" width="100px" alt="美女3" />
+      </a>
+      <a href="images/4.jpg" title="美女D">
+        <img src="images/4-small.jpg" width="100px" alt="美女4" />
+      </a>
+    </div>
+    <div style="clear:both"></div>
+    <img id="photo" src="images/1.jpg" alt="" width="450px" />
+    <p id="des">选择一个图片</p>
+    <script>
+      // 1. 获取一组a元素
+      var links = document.getElementsByTagName("a");
+      // 2. 获取id为photo的图片元素
+      var photo = document.getElementById("photo");
+      // 3. 获取p元素
+      var des = document.getElementById("des");
+      // 4. 循环遍历a注册事件
+      for (var i = 0; i < links.length; i++) {
+        links[i].onclick = function() {
+          // 4.1 取出当前点击的a的href值 赋值给 id为photo的图片元素的src
+          photo.src = this.href;
+          // 4.2 取出当前点击a的title值 赋值给 id为des的p元素
+          des.innerText = this.title;
+          // 4.3 取消a的默认行为
+          return false;
+        };
+      }
+    </script>
+  </body>
+</html>

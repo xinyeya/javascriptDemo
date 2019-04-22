@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    body {
+      text-align: center;
+    }
+    textarea {
+      width: 500px;
+      height: 200px;
+      /* 禁止拖拽文本域 */
+      resize: none;
+    
+    }
+    div {
+      width: 500px;
+      height: 300px;
+      background:#000;
+      color:#fff;
+      margin:0 auto;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+  <textarea maxlength="200"></textarea>
+  <div></div>
+  <script>
+    // 获取文本域
+    var textarea = document.querySelector('textarea');
+    // 获取div
+    var div = document.querySelector('div');
+    // 输入框输入事件 oninput
+    textarea.oninput = function() {
+      // this是谁？事件源文本域
+      // console.log(this.value);
+      div.innerText = this.value;
+    };
+  </script>
+</body>
+</html>

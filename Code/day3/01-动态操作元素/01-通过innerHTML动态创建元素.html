@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <button>添加</button>
+  <ul>
+    <li>列表项</li>
+  </ul>
+  <script>
+    // 更新ul中内容，innerHTML
+    // 1. 获取按钮
+    var btn = document.querySelector('button');
+    // 2. 获取ul
+    var ul = document.querySelector('ul');
+    // 3. 注册onclick
+    btn.onclick = function() {
+      // 获取原有的ul中的内容
+      var old = ul.innerHTML;
+      // 创建新的元素
+      ul.innerHTML = old + '<li>新的列表项</li>';
+    };
+  </script>
+</body>
+</html>

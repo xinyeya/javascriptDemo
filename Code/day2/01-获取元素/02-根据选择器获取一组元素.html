@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .ul2 li {
+      color:red;
+    }
+  </style>
+</head>
+
+<body>
+  <ul class="ul1">
+    <li>我是ul1中的li1</li>
+    <li>我是ul1中的li2</li>
+    <li>我是ul1中的li3</li>
+    <li>我是ul1中的li4</li>
+    <li>我是ul1中的li5</li>
+  </ul>
+  <hr>
+  <ul class="ul2">
+    <li>我是ul2中的li1</li>
+    <li>我是ul2中的li2</li>
+    <li>我是ul2中的li3</li>
+    <li>我是ul2中的li4</li>
+    <li>我是ul2中的li5</li>
+  </ul>
+  <script>
+    // document.querySelectorAll('选择器'); 返回伪数组
+    var lis = document.querySelectorAll('.ul2 li');
+    console.log(lis);
+    console.log(lis instanceof Array);
+    // 注意：有兼容问题，在IE8以下不支持
+    
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    li {
+      width: 400px;
+      background: gold;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <ul>
+    <li>我是列表项1</li>
+    <li>我是列表项2</li>
+    <li>我是列表项3</li>
+    <li>我是列表项4</li>
+    <li>我是列表项5</li>
+    <li>我是列表项6</li>
+    <li>我是列表项7</li>
+    <li>我是列表项8</li>
+    <li>我是列表项9</li>
+    <li>我是列表项10</li>
+  </ul>
+  <script>
+    // 获取一组li
+    var lis = document.querySelectorAll('li');
+
+
+    // 循环遍历注册onclick
+    for (var i = 0; i < lis.length; i++) {
+      // 给每一个li分配编号
+      lis[i].index = i;  
+      // 给每一个li添加事件
+      lis[i].onclick = function () {
+        alert(this.index)  // 对应的编号
+      };
+
+    }
+
+
+  </script>
+</body>
+
+</html>

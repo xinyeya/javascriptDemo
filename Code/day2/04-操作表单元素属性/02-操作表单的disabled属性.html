@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <!-- <input type="text" disabled="disabled">
+  <input type="text" disabled> -->
+  <!-- 
+      disabled 控制表单元素是否禁用   
+
+   -->
+  <input type="button" value="按钮" disabled>
+  <script>
+    var input = document.querySelector('input');
+    console.dir(input);
+    // 获取
+    console.dir(input.disabled);  // true 禁用
+    // 设置
+    input.disabled = false;
+  </script>
+</body>
+</html>

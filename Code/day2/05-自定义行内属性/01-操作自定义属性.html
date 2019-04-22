@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <!-- 
+    标签上的属性：
+      系统给的：id、className、href、src、title...
+      自定义的：bigSrc
+
+   -->
+  <img src="small.jpg"  bigSrc="big.jpg">
+  <script>
+    var img = document.querySelector('img');
+    // 操作系统给的属性
+    // 元素.属性
+    // console.log(img.src);
+
+    // 自定义属性无法通过元素.属性的方式获取
+    // console.log(img.bigSrc);  // undefined
+
+    // 获取属性：元素.getAttribute(name)
+    // var v = img.getAttribute('bigSrc');
+    // console.log(v);
+    // var v = img.getAttribute('src');
+    // console.log(v);
+
+
+    // 设置属性：元素.setAttribute(name,value)
+    // img.setAttribute('bigSrc','BIG.png');
+
+    // 删除属性：元素.removeAttribute(name)
+    // img.removeAttribute('bigSrc');
+
+    // 自定义属性的作用：一般可以将未来需要的数据暂存到自定义属性中
+  </script>
+</body>
+</html>

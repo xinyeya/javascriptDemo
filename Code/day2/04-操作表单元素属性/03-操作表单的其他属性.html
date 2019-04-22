@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <input type="checkbox" checked>
+  <input type="radio" checked>
+  <select>
+    <option value="">北京</option>
+    <option value="">上海</option>
+    <option value="">广州</option>
+    <option value="" selected>邯郸</option>
+    <option value="">石家庄</option>
+  </select>
+
+  <script>
+    var ck = document.querySelector('input[type=checkbox]');
+    console.log(ck.checked);
+    ck.checked = false;
+  </script>
+</body>
+</html>

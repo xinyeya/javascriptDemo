@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    div {
+      width: 80px;
+    }
+    input[type=text] {
+      width: 50px;
+      height: 44px;
+      outline: none;
+      border:1px solid #ccc;
+      text-align: center;
+    }
+    input[type=button] {
+      height: 24px;
+      width: 22px;
+    }
+    #reduce {
+      cursor:not-allowed;
+    }
+    input {
+      float: left;
+      /* cursor:not-allowed */
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <!-- 
+
+      readonly 只读，用户无法手动修改文本框
+     -->
+    <!-- 文本框 -->
+    <input type="text" id="total" value="1" readonly>
+    <!-- 加按钮 -->
+    <input type="button" value="+" id="add">
+    <!-- 减按钮 -->
+    <input type="button" value="-" id="reduce" disabled>
+
+  </div>
+  <script>
+    // 1. 获取文本框
+    var total = document.querySelector('#total');
+    // 2. 获取加按钮
+    var add = document.querySelector('#add');
+
+    // 3. 获取减按钮
+    var reduce = document.querySelector('#reduce');
+
+    // 4. 加功能-给加按钮注册onclick
+    add.onclick = function () {
+      // 4.1 获取文本框原有的值
+      var count = total.value;
+      // 4.2 在原有的的基础上+1
+      count++;
+      // 4.3 重新设置给文本框
+      total.value = count;
+      // 4.4 让减按钮不在禁用
+      reduce.disabled = false;
+      reduce.style.cursor = 'default';
+    };
+    // 5. 减功能-给减按钮注册onclick
+    reduce.onclick = function() {
+      // 5.1 获取文本框原有的值
+      var count = total.value;
+      // 5.2 原有值-1
+      count--;
+      // 5.3 设置给文本框
+      total.value = count;
+      // 5.4 若数量等于1时，禁用减按钮
+      if(count==1) {
+        this.disabled = true;
+        this.style.cursor = 'not-allowed'
+      }
+    };
+
+
+  </script>
+</body>
+
+</html>

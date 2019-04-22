@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <ul>
+    <li>我是列表项1</li>
+    <li>我是列表项2</li>
+    <li>我是列表项3</li>
+  </ul>
+  <script>
+    // 父元素.removeChild(子元素);
+    var ul = document.querySelector('ul');
+    // 获取第二个li元素
+    var li2 = ul.children[1];
+    // 删除
+    ul.removeChild(li2);
+
+  </script>
+</body>
+</html>

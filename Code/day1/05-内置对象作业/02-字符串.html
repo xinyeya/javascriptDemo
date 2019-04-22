@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script>
+    // 1  将一个字符串中 '张三|李四|王五|赵六|陈七'  的名字存放到一个数组中。【作业】
+    // var str = '张三|李四|王五|赵六|陈七';
+    // var arr = str.split('|');
+    // console.log(arr);
+
+    // 2  截取字符串"我爱中华人民共和国"，中的"中华"【作业】
+    // slice
+
+    // 3  把字符串 '你真棒,棒棒哒,棒棒哒,棒棒哒,棒棒哒,棒棒哒,棒棒哒' 中的所有‘棒’字符，改为 ‘牛’ 【作业】
+    // var str = '你真棒,棒棒哒,棒棒哒,棒棒哒,棒棒哒,棒棒哒,棒棒哒,棒棒哒,棒棒哒,棒棒哒,棒棒哒,棒棒哒,棒棒哒,棒棒哒,棒棒哒,棒棒哒,棒棒哒,棒棒哒,棒棒哒,棒棒哒,棒棒哒,棒棒哒,棒棒哒,棒棒哒,棒棒哒,棒棒哒,棒棒哒,棒棒哒,棒棒哒,棒棒哒,棒棒哒,棒棒哒,棒棒哒,棒棒哒,棒棒哒,棒棒哒,棒棒哒,棒棒哒,棒棒哒,棒棒哒,棒棒哒,棒棒哒,棒棒哒' ;
+    // while(true) {
+    //   // 检测棒是否存在
+    //   var index = str.indexOf('棒');
+    //   // 不存在返回-1
+    //   if(index==-1) {
+    //     break;
+    //   }else {
+    //     str = str.replace('棒','牛');
+    //   }
+    // }
+    // console.log(str);
+
+
+    // 4  字符串 ‘无敌是多么寂寞，无敌是多么空虚，无敌是多么的冷，无敌是多么的...’，用程序统计无敌在字符串中出现的次数。【作业】
+
+    // var str = '无敌是多么寂寞，无敌是多么空虚无敌，无敌是多么的冷无敌，无敌是多么的...';
+    // var count = 0;
+    // while (true) {
+    //   var index = str.indexOf('无敌', index + 2);
+    //   if (index == -1) {
+    //     break;
+    //   } else {
+    //     count++
+    //   };
+    // };
+    // console.log(count);
+
+
+
+
+
+    // var str = '无敌是多么寂寞无敌，无敌是多么空虚无敌，无敌是多么的冷无敌，无敌是多么的...';
+    // // 定义变量表示次数
+    // var count = 0;
+    // // 循环遍历中，统计
+    // while (true) {
+    //   var index = str.indexOf('无敌', index + 2);
+    //   if (index == -1) {
+    //     break;
+    //   } else {
+    //     count++;
+    //   }
+    // }
+    // console.log(count);
+
+    // 5  字符串 ‘https://www.jd.com/index.html?userName=张三&pwd=123456&id=123456’ 把地址?后面的参数提取出来存放到一个对象中   如：{userName:’张三’,pwd:’123456’,id:’123456’}【作业】
+
+
+
+
+
+
+
+
+    var str = 'https://www.jd.com/index.html?userName=张三&pwd=123456&id=123456';
+    // 先获取问号的位置
+    var  index = str.indexOf('?');
+    // 截取
+    str = str.slice(index+1);     // userName=张三&pwd=123456&id=123456
+    console.log(str);             //  userName=张三&pwd=123456&id=123456
+    //切割 key=value
+    var arr = str.split('&');
+    console.log(arr);
+    // 创建一个对象
+    var obj = {};
+    // 循环遍历arr
+    for(var i = 0; i < arr.length; i++) {
+      // console.log(arr[i]);
+      var newArr = arr[i].split('=');
+      console.log(newArr);
+      var key = newArr[0];
+      var value = newArr[1];
+      // 给对象添加属性  对象[key] = value;
+      obj[key] = value;
+    }
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>xiangce</title>
+</head>
+
+<body>
+  <div id="image">
+    <a href="./images/1.jpg" title="美女A"><img src="./images/1-small.jpg" alt="美女1" width="100px"></a>
+    <a href="./images/2.jpg" title="美女b"><img src="./images/2-small.jpg" alt="美女2" width="100px"></a>
+    <a href="./images/3.jpg" title="美女c"><img src="./images/3-small.jpg" alt="美女3" width="100px"></a> <a
+      href="./images/4.jpg" title="美4"><img src="./images/4-small.jpg" alt="美女4" width="100px"></a>
+  </div>
+  <div style="clear:both">
+  </div>
+  <img id="photo" src="./images/1.jpg" alt="" width="450px">
+  <p id="des">选择一张图片</p>
+</body>
+<script>
+  // 获取每个a标签
+  var links = document.querySelectorAll('a');
+  // 获取img标签
+  var photo = document.getElementById('photo');
+
+  var des = document.getElementById('des');
+  // 将a标签的src赋值给img
+
+  for (let i = 0; i < links.length; i++) {
+    links[i].onclick = function () {
+      photo.src = this.href;
+      des.innerText = this.title;
+      return false;
+    };
+  }
+</script>
+
+
+
+</html>
